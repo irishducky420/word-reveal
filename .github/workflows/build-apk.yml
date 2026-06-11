@@ -1,1 +1,44 @@
+# Builds an installable Android APK on GitHub's servers.
+# Runs automatically on every push; also startable by hand from the
+# Actions tab ("Run workflow"). The finished APK appears under the run's
+# "Artifacts" section.
+name: Build Android APK
 
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      # Generates the android/ platform folder (machine-generated, not
+      # part of the source). --project-name keeps it valid regardless of
+      # what the repository is called.
+      - run: flutter create . --project-name word_reveal --platforms android --org dev.wordreveal
+
+      - run: flutter pub get
+
+      - run: flutter test
+
+      - run: flutter build apk --release
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: word-reveal-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 30
