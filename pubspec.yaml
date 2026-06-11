@@ -1,0 +1,28 @@
+name: word_reveal
+description: "Word Reveal: Hidden Masterpieces - word-search puzzles that paint a picture."
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.27.0"
+
+# Versions pinned exactly per build brief.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: 2.5.1
+  go_router: 14.2.7
+  hive: 2.2.3
+  hive_flutter: 1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 4.0.0
+  mocktail: 1.0.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/content/

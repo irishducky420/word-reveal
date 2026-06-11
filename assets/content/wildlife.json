@@ -1,0 +1,64 @@
+{
+  "id": "wildlife",
+  "name": "Wildlife",
+  "description": "Paint the wild, one word at a time.",
+  "projects": [
+    {
+      "id": "fox",
+      "name": "Red Fox",
+      "imageRef": "painter:fox",
+      "puzzles": [
+        {
+          "difficulty": "beginner",
+          "words": ["FOX", "DEN", "TAIL", "PAWS", "EARS", "KIT", "SNOUT"]
+        },
+        {
+          "difficulty": "easy",
+          "words": ["FOREST", "HUNTER", "RUSSET", "WHISKER", "POUNCE", "BURROW", "CUNNING"]
+        },
+        {
+          "difficulty": "medium",
+          "words": ["WILDLIFE", "PREDATOR", "AUTUMN", "MEADOW", "NOCTURNAL", "FORAGER", "VIXEN", "THICKET"]
+        }
+      ]
+    },
+    {
+      "id": "owl",
+      "name": "Night Owl",
+      "imageRef": "painter:owl",
+      "puzzles": [
+        {
+          "difficulty": "easy",
+          "words": ["OWL", "MOON", "NIGHT", "PERCH", "HOOT", "TALON", "WINGS", "STARS"]
+        },
+        {
+          "difficulty": "easy",
+          "words": ["FEATHER", "SILENT", "BRANCH", "RAPTOR", "ROOST", "PREY"]
+        },
+        {
+          "difficulty": "medium",
+          "words": ["MOONLIGHT", "SWOOPING", "PLUMAGE", "TWILIGHT", "HUNTRESS", "FOREST", "WISDOM"]
+        }
+      ]
+    },
+    {
+      "id": "butterfly",
+      "name": "Garden Butterfly",
+      "imageRef": "painter:butterfly",
+      "puzzles": [
+        {
+          "difficulty": "easy",
+          "words": ["WING", "BLOOM", "PETAL", "NECTAR", "GARDEN", "FLY", "SUMMER"]
+        },
+        {
+          "difficulty": "medium",
+          "words": ["BUTTERFLY", "CHRYSALIS", "FLUTTER", "POLLEN", "CATERPILLAR", "MEADOW"]
+        },
+        {
+          "difficulty": "medium",
+          "words": ["MIGRATION", "ANTENNAE", "MONARCH", "BLOSSOM", "EMERGE", "COCOON", "SPRING"]
+        }
+      ]
+    }
+  ]
+}
